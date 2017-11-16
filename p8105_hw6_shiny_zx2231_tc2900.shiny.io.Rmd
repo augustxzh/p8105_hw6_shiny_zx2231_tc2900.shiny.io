@@ -20,7 +20,7 @@ library(shiny)
 Column {.sidebar}
 ----------------------------------------------------------------------
 ```{r}
-noaa = read_csv("testtest.csv")
+noaa = read_csv("nynoaadat_2000_2010.csv")
 
 # sliderInput widget
 year_range = noaa %>% distinct(year) %>% pull() %>% sort() %>% range()
