@@ -3,7 +3,7 @@ title: "p8105_hw6_zx2231_tc2900"
 output: 
   flexdashboard::flex_dashboard:
     vertical_layout: scroll
-  runtime: shiny
+runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
@@ -25,7 +25,7 @@ noaa = read_csv("nynoaadat_2000_2010.csv")
 # sliderInput widget
 year_range = noaa %>% distinct(year) %>% pull() %>% sort() %>% range()
 
-sliderInput("year_range", label = h3("Choose year range"), min = min(year_range), max = max(year_range), value = c(2009, 2010), step = 1)
+sliderInput("year_range", label = h3("Choose year range"), min = min(year_range), max = max(year_range), value = c(2000, 2010), step = 1)
 
 #checkboxInput widget
 station_id = noaa %>%
